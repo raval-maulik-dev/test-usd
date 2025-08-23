@@ -35,6 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/api/quiz/questions', [QuizController::class, 'getQuestions'])->name('api.quiz.questions');
     Route::post('/quiz/answer', [QuizController::class, 'submitAnswer'])->name('quiz.answer');
     Route::get('/quiz/results', [QuizController::class, 'results'])->name('quiz.results');
+    Route::get('/quiz/pledge', [QuizController::class, 'showPledge'])->name('quiz.pledge');
     Route::get('/certificate/{id}', [QuizController::class, 'certificate'])->name('certificate');
 });
 Route::get('/leaderboard', [HomeController::class, 'leaderboard'])->name('leaderboard');

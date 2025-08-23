@@ -4,9 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class QuizController extends Controller
 {
+    use AuthorizesRequests, ValidatesRequests;
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
+    /**
+     * Show the Swadeshi pledge page
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showPledge()
+    {
+        return view('quiz.pledge');
+    }
+
     public function start()
     {
         if (!auth()->check()) {
