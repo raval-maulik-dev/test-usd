@@ -66,3 +66,4 @@ Route::get('/admin/exports', [AdminController::class, 'exports'])->name('admin.e
 // API Routes for Quiz Functionality
 Route::get('/api/quiz/question/{id}', [QuizController::class, 'getQuestion'])->name('api.quiz.question');
 Route::post('/api/quiz/submit', [QuizController::class, 'submitQuiz'])->name('api.quiz.submit');
+Route::post('/quiz/pledge', [QuizController::class, 'recordPledge'])->name('quiz.pledge');

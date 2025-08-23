@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class QuizController extends Controller
 {
@@ -191,6 +192,33 @@ class QuizController extends Controller
             return 'good';
         } else {
             return 'beginner';
+        }
+    }
+    
+    /**
+     * Record that the user has taken the pledge
+     */
+    public function recordPledge(Request $request)
+    {
+        if (!auth()->check()) {
+            return response()->json(['success' => false, 'message' => 'User not authenticated'], 401);
+        }
+
+        try {
+            $user = auth()->user();
+            $user->pledge_taken = true;
+            $user->pledge_taken_at = now();
+            $user->save();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Pledge recorded successfully'
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to record pledge: ' . $e->getMessage()
+            ], 500);
         }
     }
 }
