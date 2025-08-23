@@ -13,6 +13,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -74,7 +77,6 @@
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="{{ route('home') }}" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Home</a>
                     <a href="{{ route('leaderboard') }}" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Leaderboard</a>
-                    <a href="{{ route('lucky.draw') }}" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Lucky Draw</a>
                     @auth
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -109,7 +111,6 @@
                 <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
                     <a href="{{ route('home') }}" class="block px-3 py-2 text-gray-700 hover:bg-orange-50 rounded-md">Home</a>
                     <a href="{{ route('leaderboard') }}" class="block px-3 py-2 text-gray-700 hover:bg-orange-50 rounded-md">Leaderboard</a>
-                    <a href="{{ route('lucky.draw') }}" class="block px-3 py-2 text-gray-700 hover:bg-orange-50 rounded-md">Lucky Draw</a>
                     @auth
                         <form method="POST" action="{{ route('logout') }}" class="w-full">
                             @csrf
@@ -118,7 +119,6 @@
                     @else
                         <a href="{{ route('login') }}" class="block px-3 py-2 bg-orange-500 text-white rounded-md text-center">Login</a>
                     @endauth
-                    <a href="{{ route('admin.login') }}" class="block px-3 py-2 bg-gray-100 text-gray-700 rounded-md text-center">Admin Panel</a>
                 </div>
             </div>
         </div>
@@ -169,7 +169,7 @@
                         <li><a href="{{ route('home') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Home</a></li>
                         <li><a href="{{ route('register') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Register</a></li>
                         <li><a href="{{ route('leaderboard') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Leaderboard</a></li>
-                        <li><a href="{{ route('lucky.draw') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Lucky Draw</a></li>
+                        <!-- <li><a href="{{ route('lucky.draw') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Lucky Draw</a></li> -->
                     </ul>
                 </div>
 
@@ -193,21 +193,15 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                             </svg>
                             <div>
-                                <p class="text-gray-300 text-sm">Mehsana District</p>
-                                <p class="text-gray-300 text-sm">Gujarat, India</p>
+                                <p class="text-gray-300 text-sm">VELLAXY TECH PRIVATE LIMITED</p>
+                                <p class="text-gray-300 text-sm">E-709, Ganesh Glory 11, Jagatpur, Ahmedabad, Gujarat, India, 382470</p>
                             </div>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                            </svg>
-                            <p class="text-gray-300 text-sm">+91 98765 43210</p>
                         </div>
                         <div class="flex items-center space-x-3">
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 7.89a2 2 0 002.83 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
-                            <p class="text-gray-300 text-sm">info@swadeshiabhiyan.com</p>
+                            <p class="text-gray-300 text-sm">info@useswadeshi.com</p>
                         </div>
                     </div>
                 </div>
