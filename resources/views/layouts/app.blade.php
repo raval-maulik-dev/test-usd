@@ -70,7 +70,9 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Logo and Title -->
                 <div class="flex items-center space-x-4">
-                    <img src="{{ asset('asset/useswadeshi-remove-bg-logo.png') }}" alt="Swadeshi Abhiyan Logo" class="w-40 h-auto">
+                    <a href="{{ url('/') }}" class="block">
+                        <img src="{{ asset('asset/useswadeshi-remove-bg-logo.png') }}" alt="Swadeshi Abhiyan Logo" class="w-40 h-auto hover:opacity-90 transition-opacity">
+                    </a>
                 </div>
 
                 <!-- Navigation -->
