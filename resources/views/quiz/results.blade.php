@@ -91,42 +91,6 @@
                         </div>
                     </div>
 
-                    <!-- Pledge Section -->
-                    <div id="pledgeSection">
-                        <div class="bg-white rounded-3xl shadow-2xl border-2 border-amber-200 p-8 mb-8 transform transition-all duration-300 hover:shadow-lg">
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <svg class="w-8 h-8 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-2xl font-bold text-gray-800 mb-4">Take the Swadeshi Pledge</h3>
-                                <p class="text-gray-600 mb-6">Join thousands of Indians in supporting our economy</p>
-                            </div>
-                            
-                            <div class="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-lg">
-                                <div class="flex">
-                                    <div class="flex-shrink-0">
-                                        <svg class="h-5 w-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-sm text-amber-700">
-                                            <strong>Important:</strong> You must take the pledge to unlock your certificate and see where you stand on the leaderboard.
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                <div class="mt-6 text-center">
-                                    <p class="text-gray-700 font-medium mb-6 italic">
-                                        "I pledge to support and promote Indian-made products and contribute to the growth of our nation's economy. I will make a conscious effort to choose Swadeshi products and encourage others to do the same."
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Action Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="{{ route('certificate', ['id' => auth()->id()]) }}" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-dark px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center">
@@ -134,6 +98,9 @@
                         </a>
                         <a href="{{ route('leaderboard') }}" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center">
                             🏆 View Leaderboard
+                        </a>
+                        <a href="{{ route('quiz.pledge') }}" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center">
+                            ✋ Take Pledge
                         </a>
                     </div>
                 </div>
@@ -161,12 +128,14 @@
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const acceptPledgeBtn = document.getElementById('acceptPledge');
-        const certificateSection = document.getElementById('certificateSection');
-        const pledgeSection = document.getElementById('pledgeSection');
-        
         // Check if user has already taken the pledge from localStorage
         const hasPledged = localStorage.getItem('hasPledged');
+        const pledgeSection = document.getElementById('pledgeSection');
+        
+        if (hasPledged === 'true' && pledgeSection) {
+            // Hide pledge section if already pledged
+            pledgeSection.style.display = 'none';
+        }
         
         if (hasPledged) {
             // If already pledged, hide pledge section and show certificate section
