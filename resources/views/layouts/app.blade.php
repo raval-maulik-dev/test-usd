@@ -180,7 +180,6 @@
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors text-sm">Interactive Quiz</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors text-sm">Digital Certificates</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors text-sm">Real-time Leaderboard</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors text-sm">Multi-language Support</a></li>
                     </ul>
                 </div>
 
@@ -212,13 +211,16 @@
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <!-- Left: Copyright -->
                     <div class="text-sm text-gray-400 mb-4 md:mb-0">
-                        © {{ date('Y') }} Swadeshi Abhiyan Mehsana. All rights reserved.
+                        © {{ date('Y') }} Use Swadeshi Abhiyan. All rights reserved by VELLAXY TECH PRIVATE LIMITED
                     </div>
                     
                     <!-- Center: Hashtags -->
                     <div class="flex space-x-4 mb-4 md:mb-0">
+
                         <span class="text-gray-400 text-sm">#UseSwadeshi</span>
                         <span class="text-gray-400 text-sm">#SwadeshiAbhiyan</span>
+                        <span class="text-gray-400 text-sm">#UseSwadeshi</span>
+                        <span class="text-gray-400 text-sm">#SwadeshiAbhiyan</span
                         <span class="text-gray-400 text-sm">#VocalForLocal</span>
                         <span class="text-gray-400 text-sm">#MadeInIndia</span>
                     </div>
