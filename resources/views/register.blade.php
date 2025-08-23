@@ -35,7 +35,7 @@
                             class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
                             placeholder="+91 98765 43210">
                 </div>
-
+                
                 <!-- City Field
                 <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-2">City *</label>
