@@ -19,16 +19,17 @@ class RegisterController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'mobile' => 'required|string|max:20|unique:users',
-            'city' => 'required|string|max:100',
-            'password' => 'required|string|min:8|confirmed',
+            'mobile' => 'required|string|max:20|unique:users,mobile',
         ]);
+
+        // Set default password for all users
+        $defaultPassword = 'Reset@123';
 
         $user = User::create([
             'name' => $validatedData['name'],
             'mobile' => $validatedData['mobile'],
-            'city' => $validatedData['city'],
-            'password' => Hash::make($validatedData['password']),
+            'password' => Hash::make($defaultPassword),
+            'city' => 'Not specified', // Default value for city as it's NOT NULL
         ]);
 
         Auth::login($user);

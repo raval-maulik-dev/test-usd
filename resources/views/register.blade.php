@@ -38,7 +38,7 @@
                             class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
                             placeholder="+91 98765 43210">
                 </div>
-                <!-- City Field -->
+                <!-- City Field
                 <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-2">City *</label>
                     <input type="text" name="city" required 
@@ -46,7 +46,7 @@
                            placeholder="Enter your city">
                 </div>
 
-                <!-- Password Field -->
+                Password Field
                 <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-2">Password *</label>
                     <input type="password" name="password" required 
@@ -55,7 +55,7 @@
                            minlength="8">
                 </div>
 
-                <!-- Confirm Password Field -->
+                Confirm Password Field
                 <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-2">Confirm Password *</label>
                     <input type="password" name="password_confirmation" required 
@@ -64,14 +64,14 @@
                            minlength="8">
                 </div>
 
-                <!-- Terms and Conditions -->
+                Terms and Conditions
                 <div class="flex items-start space-x-3">
                     <input type="checkbox" id="terms" required class="mt-1 w-5 h-5 text-orange-500 border border-gray-300 rounded focus:ring-orange-500">
                     <label for="terms" class="text-sm text-gray-600">
                         I agree to the <a href="#" class="text-orange-600 hover:text-orange-700 font-medium">Terms and Conditions</a> and 
                         <a href="#" class="text-orange-600 hover:text-orange-700 font-medium">Privacy Policy</a>. I consent to receive event-related communications.
                     </label>
-                </div>
+                </div> -->
 
                 <!-- Submit Button -->
                 <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">

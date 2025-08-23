@@ -30,31 +30,20 @@
                     </div>
                 @endif
                 
+                <!-- Name -->
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                    <input type="text" name="name" value="{{ old('name') }}" required 
+                           class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
+                           placeholder="Enter your full name" autofocus>
+                </div>
+
                 <!-- Mobile Number -->
                 <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-2">Mobile Number *</label>
                     <input type="tel" name="mobile" value="{{ old('mobile') }}" required 
                            class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
                            placeholder="+91 98765 43210">
-                </div>
-
-                <!-- Password -->
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Password *</label>
-                    <input type="password" name="password" required 
-                           class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-                           placeholder="Enter your password">
-                </div>
-
-                <!-- Remember Me -->
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center">
-                        <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-orange-500 focus:ring-orange-500 border-gray-300 rounded">
-                        <label for="remember" class="ml-2 block text-sm text-gray-700">Remember me</label>
-                    </div>
-                    <div>
-                        <a href="#" class="text-sm font-medium text-orange-600 hover:text-orange-500">Forgot password?</a>
-                    </div>
                 </div>
 
                 <!-- Submit Button -->
