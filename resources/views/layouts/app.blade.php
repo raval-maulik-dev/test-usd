@@ -216,8 +216,11 @@
                     
                     <!-- Center: Hashtags -->
                     <div class="flex space-x-4 mb-4 md:mb-0">
-                         <span class="text-gray-400 text-sm">#UseSwadeshi</span>
-                         <span class="text-gray-400 text-sm">#SwadeshiAbhiyan</span>
+
+                        <span class="text-gray-400 text-sm">#UseSwadeshi</span>
+                        <span class="text-gray-400 text-sm">#SwadeshiAbhiyan</span>
+                        <span class="text-gray-400 text-sm">#UseSwadeshi</span>
+                        <span class="text-gray-400 text-sm">#SwadeshiAbhiyan</span
                         <span class="text-gray-400 text-sm">#VocalForLocal</span>
                         <span class="text-gray-400 text-sm">#MadeInIndia</span>
                     </div>
