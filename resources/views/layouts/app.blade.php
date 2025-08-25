@@ -221,10 +221,8 @@
 
                         <span class="text-gray-400 text-sm">#UseSwadeshi</span>
                         <span class="text-gray-400 text-sm">#SwadeshiAbhiyan</span>
-                        <span class="text-gray-400 text-sm">#UseSwadeshi</span>
-                        <span class="text-gray-400 text-sm">#SwadeshiAbhiyan</span
                         <span class="text-gray-400 text-sm">#VocalForLocal</span>
-                        <span class="text-gray-400 text-sm">#MadeInIndia</span>
+                   <!-- <span class="text-gray-400 text-sm">#MadeInIndia</span> -->
                     </div>
                 </div>
             </div>
